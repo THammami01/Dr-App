@@ -38,6 +38,9 @@
   "dependencies": {
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
+    "@iconify-icons/healthicons": "^1.1.1",
+    "@iconify-icons/si-glyph": "^1.1.0",
+    "@iconify-icons/wpf": "^1.1.0",
     "@iconify/icons-ant-design": "^1.1.0",
     "@iconify/icons-eva": "^1.1.0",
     "@iconify/icons-ic": "^1.1.7",
@@ -55,6 +58,7 @@
     "framer-motion": "^4.1.17",
     "history": "^5.0.0",
     "lodash": "^4.17.21",
+    "moment": "^2.29.1",
     "numeral": "^2.0.6",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",

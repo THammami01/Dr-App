@@ -23,11 +23,13 @@ export default function Lists(theme) {
       styleOverrides: {
         root: {
           marginTop: 0,
-          marginBottom: 0
+          marginBottom: 0,
+          textTransform: 'none'
         },
         multiline: {
           marginTop: 0,
-          marginBottom: 0
+          marginBottom: 0,
+          textTransform: 'none'
         }
       }
     }

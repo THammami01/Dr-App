@@ -21,12 +21,12 @@ import {
 
 export default function DashboardApp() {
   return (
-    <Page title="Dashboard | Minimal-UI">
+    <Page title="Tableau de bord">
       <Container maxWidth="xl">
         <Box sx={{ pb: 5 }}>
-          <Typography variant="h4">Hi, Welcome back</Typography>
+          <Typography variant="h4">Bienvenue sur le tableau de bord</Typography>
         </Box>
-        <Grid container spacing={3}>
+        {/* <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3}>
             <AppWeeklySales />
           </Grid>
@@ -71,7 +71,7 @@ export default function DashboardApp() {
           <Grid item xs={12} md={6} lg={8}>
             <AppTasks />
           </Grid>
-        </Grid>
+        </Grid> */}
       </Container>
     </Page>
   );

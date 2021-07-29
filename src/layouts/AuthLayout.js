@@ -38,17 +38,6 @@ export default function AuthLayout({ children }) {
       <RouterLink to="/">
         <Logo />
       </RouterLink>
-
-      <MHidden width="smDown">
-        <Typography
-          variant="body2"
-          sx={{
-            mt: { md: -2 }
-          }}
-        >
-          {children}
-        </Typography>
-      </MHidden>
     </HeaderStyle>
   );
 }

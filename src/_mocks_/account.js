@@ -1,9 +1,10 @@
 // ----------------------------------------------------------------------
 
 const account = {
-  displayName: 'Jaydon Frankie',
-  email: 'demo@minimals.cc',
-  photoURL: '/static/mock-images/avatars/avatar_default.jpg'
+  displayName: 'Dr. Mahdi Kaabi',
+  // email: 'ID: 012345678',
+  // TODO: CHANGE THIS AVATAR IMAGE
+  photoURL: '/static/mock-images/avatars/doctor_avatar.png'
 };
 
 export default account;

@@ -1,26 +1,17 @@
 import { useRef, useState } from 'react';
 // material
 import { alpha } from '@material-ui/core/styles';
-import { Box, MenuItem, ListItemIcon, ListItemText, IconButton } from '@material-ui/core';
+import { Box, MenuItem, ListItemIcon, ListItemText, IconButton, Button } from '@material-ui/core';
 // components
 import MenuPopover from '../../components/MenuPopover';
 
 // ----------------------------------------------------------------------
 
+// TODO: CHANGE LANGUAGES FROM HERE
 const LANGS = [
   {
-    value: 'en',
-    label: 'English',
-    icon: '/static/icons/ic_flag_en.svg'
-  },
-  {
-    value: 'de',
-    label: 'German',
-    icon: '/static/icons/ic_flag_de.svg'
-  },
-  {
     value: 'fr',
-    label: 'French',
+    label: 'Français (TN)',
     icon: '/static/icons/ic_flag_fr.svg'
   }
 ];
@@ -41,20 +32,19 @@ export default function LanguagePopover() {
 
   return (
     <>
-      <IconButton
+      <Button
         ref={anchorRef}
         onClick={handleOpen}
         sx={{
           padding: 0,
-          width: 44,
-          height: 44,
+          fontSize: 15,
           ...(open && {
             bgcolor: (theme) => alpha(theme.palette.primary.main, theme.palette.action.focusOpacity)
           })
         }}
       >
-        <img src={LANGS[0].icon} alt={LANGS[0].label} />
-      </IconButton>
+        Langue
+      </Button>
 
       <MenuPopover open={open} onClose={handleClose} anchorEl={anchorRef.current}>
         <Box sx={{ py: 1 }}>

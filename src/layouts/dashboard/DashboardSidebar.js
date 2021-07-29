@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import moment from 'moment';
+import { useEffect, useState } from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 // material
 import { styled } from '@material-ui/core/styles';
@@ -41,6 +42,16 @@ DashboardSidebar.propTypes = {
 
 export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
   const { pathname } = useLocation();
+  const [currDatetime, setCorrDatetime] = useState([]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const tempDatetime = moment().format('DD/MM/YYYY HH:mm').split(' ');
+      setCorrDatetime(tempDatetime);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     if (isOpenSidebar) {
@@ -87,36 +98,36 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
           alignItems="center"
           spacing={3}
           sx={{
-            p: 2.5,
-            pt: 5,
+            height: 90,
             borderRadius: 2,
-            position: 'relative',
-            bgcolor: 'grey.200'
+            bgcolor: 'grey.200',
+            justifyContent: 'center',
+            alignItems: 'center'
           }}
         >
-          <Box
+          {/* <Box
             component="img"
             src="/static/illustrations/illustration_avatar.png"
             sx={{ width: 100, position: 'absolute', top: -50 }}
-          />
+          /> */}
 
           <Box sx={{ textAlign: 'center' }}>
             <Typography gutterBottom variant="h6">
-              Get more?
+              {currDatetime[1]}
             </Typography>
             <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-              From only $69
+              {currDatetime[0]}
             </Typography>
           </Box>
 
-          <Button
+          {/* <Button
             fullWidth
             href="https://material-ui.com/store/items/minimal-dashboard/"
             target="_blank"
             variant="contained"
           >
             Upgrade to Pro
-          </Button>
+          </Button> */}
         </Stack>
       </Box>
     </Scrollbar>
